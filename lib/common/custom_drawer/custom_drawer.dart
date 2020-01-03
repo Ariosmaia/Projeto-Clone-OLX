@@ -10,6 +10,9 @@ class CustomDrawer extends StatelessWidget {
         children: <Widget>[
           CustomHeader(),
           IconsSection(),
+          Divider(
+            color: Colors.grey[500],
+          )
         ],
       ),
     );
