@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xlo/screens/home/home_screen.dart';
 
 class BaseScreen extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _BaseScreenState extends State<BaseScreen> {
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         children: <Widget>[
-          Container(color: Colors.red),
+          HomeScreen(),
           Container(color: Colors.blue),
           Container(color: Colors.red),
           Container(color: Colors.blue),
