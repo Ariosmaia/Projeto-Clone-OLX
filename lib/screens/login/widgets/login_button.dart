@@ -22,8 +22,9 @@ class LoginButton extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
             onPressed: snapshot.data.enabled
-                ? () {
-                    loginBloc.loginWithEmail();
+                ? () async {
+                    final bool success = await loginBloc.loginWithEmail();
+                    if (success) Navigator.of(context).pop();
                   }
                 : null,
             child: snapshot.data.loading
